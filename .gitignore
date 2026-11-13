@@ -1,0 +1,37 @@
+# dependencies
+/node_modules
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+env.local
+env*
+.env*
+.env*.local
+.env
+# keep the example file that shows which variables are needed
+!.env.example
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Original font download (all weights) — not needed in the repo.
+# The three weights the site uses live in public/fonts/ and ARE committed
+# (the build needs them; browsers download them anyway).
+*.zip
+tmp_figma_images/

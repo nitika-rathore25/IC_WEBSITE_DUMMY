@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<rect x="0.5" y="0.5" width="99" height="99" rx="49.5" fill="url(#paint0_radial_0_11)"/>
+<rect x="0.5" y="0.5" width="99" height="99" rx="49.5" stroke="url(#paint1_linear_0_11)"/>
+<path id="Vector" d="M68.8716 63.7075L63.5321 58.4L65.6408 56.3115L71 61.6L68.8716 63.7075ZM62.01 40.073L59.9014 37.9845L65.2409 32.696L67.3688 34.7845L62.01 40.073ZM38.99 40.0925L33.6504 34.7845L35.7591 32.696L41.1178 37.9845L38.99 40.0925ZM32.1087 63.7075L30 61.6L35.3396 56.3115L37.4679 58.4L32.1087 63.7075ZM43.2461 61.708L50.5 57.3885L57.7735 61.777L55.8744 53.596L62.2549 48.1425L53.8551 47.396L50.5 39.673L47.1641 47.346L38.7648 48.073L45.1448 53.596L43.2461 61.708ZM38.6522 68L41.7781 54.7L31.3166 45.731L45.118 44.5575L50.5 32L55.9016 44.5575L69.7026 45.731L59.2411 54.7L62.3675 68L50.5 60.9345L38.6522 68Z" fill="#872BF9"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_11" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50 50) rotate(90) scale(50)">
+<stop stop-color="#872BF9" stop-opacity="0.25"/>
+<stop offset="1" stop-color="#872BF9" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear_0_11" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+<stop stop-color="#872BF9"/>
+<stop offset="0.3" stop-color="#872BF9" stop-opacity="0"/>
+<stop offset="0.7" stop-color="#872BF9" stop-opacity="0"/>
+<stop offset="1" stop-color="#872BF9"/>
+</linearGradient>
+</defs>
+</svg>

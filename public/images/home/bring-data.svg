@@ -1,0 +1,19 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Icon">
+<rect x="0.5" y="0.5" width="99" height="99" rx="49.5" fill="url(#paint0_radial_0_13)"/>
+<rect x="0.5" y="0.5" width="99" height="99" rx="49.5" stroke="url(#paint1_linear_0_13)"/>
+<path id="Vector" d="M35.8282 68C34.7584 68 33.8529 67.6294 33.1118 66.8882C32.3706 66.1471 32 65.2416 32 64.1718V35.8282C32 34.7584 32.3706 33.8529 33.1118 33.1118C33.8529 32.3706 34.7584 32 35.8282 32H64.1718C65.2416 32 66.1471 32.3706 66.8882 33.1118C67.6294 33.8529 68 34.7584 68 35.8282V64.1718C68 65.2416 67.6294 66.1471 66.8882 66.8882C66.1471 67.6294 65.2416 68 64.1718 68H35.8282ZM35.1765 42.9302H64.8235V35.8282C64.8235 35.6651 64.7556 35.5158 64.6197 35.3803C64.4842 35.2444 64.3349 35.1765 64.1718 35.1765H35.8282C35.6651 35.1765 35.5158 35.2444 35.3803 35.3803C35.2444 35.5158 35.1765 35.6651 35.1765 35.8282V42.9302ZM35.1765 53.8933H64.8235V46.1067H35.1765V53.8933ZM35.8282 64.8235H64.1718C64.3349 64.8235 64.4842 64.7556 64.6197 64.6197C64.7556 64.4842 64.8235 64.3349 64.8235 64.1718V57.0698H35.1765V64.1718C35.1765 64.3349 35.2444 64.4842 35.3803 64.6197C35.5158 64.7556 35.6651 64.8235 35.8282 64.8235ZM38.1089 40.9513V37.1231H41.9365V40.9513H38.1089ZM38.1089 51.9138V48.0862H41.9365V51.9138H38.1089ZM38.1089 62.8769V59.0487H41.9365V62.8769H38.1089Z" fill="#2062AD"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_13" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(50 50) rotate(90) scale(50)">
+<stop stop-color="#2062AD" stop-opacity="0.25"/>
+<stop offset="1" stop-color="#2062AD" stop-opacity="0"/>
+</radialGradient>
+<linearGradient id="paint1_linear_0_13" x1="50" y1="0" x2="50" y2="100" gradientUnits="userSpaceOnUse">
+<stop stop-color="#2062AD"/>
+<stop offset="0.3" stop-color="#2062AD" stop-opacity="0"/>
+<stop offset="0.7" stop-color="#2062AD" stop-opacity="0"/>
+<stop offset="1" stop-color="#2062AD"/>
+</linearGradient>
+</defs>
+</svg>

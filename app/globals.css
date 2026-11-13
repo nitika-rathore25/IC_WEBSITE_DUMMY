@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color tokens (as "R G B" triplets for Tailwind's alpha syntax).
+     Replace these with the client's real palette — nothing else in the
+     project should need to change to reflect a rebrand. */
+  --color-background: 255 255 255;
+  --color-foreground: 10 10 10;
+
+  --color-primary: 37 99 235;
+  --color-primary-foreground: 255 255 255;
+
+  --color-secondary: 241 245 249;
+  --color-secondary-foreground: 15 23 42;
+
+  --color-muted: 241 245 249;
+  --color-muted-foreground: 100 116 139;
+
+  --color-accent: 241 245 249;
+  --color-accent-foreground: 15 23 42;
+
+  --color-destructive: 220 38 38;
+  --color-destructive-foreground: 255 255 255;
+
+  --color-border: 226 232 240;
+
+  /* Insights Curry brand tokens (new Figma design) */
+  --color-heading: 20 20 20;        /* #141414 */
+  --color-para: 125 126 128;        /* #7d7e80 */
+  --color-cta: 232 92 13;           /* #e85c0d */
+  --color-insight-blue: 32 98 173;  /* #2062ad */
+  --color-navy: 5 44 90;            /* #052c5a */
+  --color-cyan: 0 221 255;          /* #0df */
+  --color-surface: 245 245 247;     /* #f5f5f7 */
+
+  /* Radius scale */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+  /* One typeface site-wide: Neue Montreal (the Figma font); system sans only while it loads. */
+  font-family: var(--font-neue), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Gradient text — used sparingly on select heading highlights only.
+   Exact values from the Insights Curry Figma source. */
+.gradient-text {
+  background: linear-gradient(135deg, #2062ad 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient border line — from the Figma source, currently unused on the
+   homepage but kept available for other pages built from the same file. */
+.gradient-line {
+  height: 3px;
+  background: linear-gradient(90deg, #2062ad 0%, #7c3aed 100%);
+  border-radius: 2px;
+}
+
+/* Clean scrollbar — from the Figma source. */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+/* Heading highlight gradients from the Figma design (apply with bg-clip-text). */
+.text-gradient-orange {
+  background-image: linear-gradient(to bottom, #ffd33d, #fd6446);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-teal {
+  background-image: linear-gradient(to bottom, #13d8bd, #3c48b7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Continuous sideways strip ("moving blocks" in the Figma design). The track holds
+   the items twice, so sliding it by half loops seamlessly. Paused on hover, and
+   off entirely for people who prefer reduced motion. */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-track {
+  animation: marquee 40s linear infinite;
+}
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Phones (below md): the page is centre-aligned — text, headings, buttons, icons
+   and card contents — except each page's first section (the hero), which keeps its
+   left-aligned layout apart from its buttons, which are centred too. Tablet and desktop are untouched. Hooked on <main> and the
+   footer (.mobile-center); long-form article text and form fields opt out with
+   .mobile-center-off. These override the left-aligned utilities only below md. */
+@media (max-width: 767.98px) {
+  .mobile-center { text-align: center; }
+  :is(.mobile-center > section:first-of-type, .mobile-center .mobile-center-off) { text-align: left; }
+  .mobile-center .text-left:not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { text-align: center; }
+  .mobile-center .items-start:not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { align-items: center; }
+  .mobile-center .self-start:not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { align-self: center; }
+  .mobile-center .justify-self-start:not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { justify-self: center; }
+  .mobile-center .justify-start:not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { justify-content: center; }
+  /* Rows (icon + title, chip rows): centre their contents; spaced-apart rows keep their layout. */
+  .mobile-center :is(.flex, .inline-flex):not(.flex-col, .flex-col-reverse, .justify-between, .justify-around, .justify-evenly, .mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { justify-content: center; }
+  /* Images and icons stacked in a column sit in the middle of it. */
+  .mobile-center .flex-col > :is(img, svg):not(.mobile-center > section:first-of-type *, .mobile-center-off *) { align-self: center; }
+  /* Shrink-wrapped blocks (pills, badges, labels) sit in the middle of their column. */
+  .mobile-center .w-fit:not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { margin-left: auto; margin-right: auto; }
+  /* Bullet lists: markers move inside so centred lines keep their bullet. */
+  .mobile-center :is(.list-disc, .list-decimal):not(.mobile-center > section:first-of-type *, .mobile-center-off, .mobile-center-off *) { list-style-position: inside; padding-left: 0; }
+  /* Heroes: buttons stay centred (they centre themselves); card icons keep the hero layout. */
+  .mobile-center > section:first-of-type .max-md\:self-center { align-self: auto; }
+}
